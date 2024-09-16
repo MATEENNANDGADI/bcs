@@ -1,0 +1,41 @@
+.jedi-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+  
+  .jedi-header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #00ccff;
+  }
+  
+  .jedi-header p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #ffdd57;
+  }
+  
+  .jedi-graphic {
+    margin-top: 20px;
+  }
+  
+  .lightsaber-image {
+    width: 150px;
+    height: auto;
+    animation: swing 2s infinite;
+  }
+  
+  /* Adding a simple animation */
+  @keyframes swing {
+    0% { transform: rotate(-25deg); }
+    50% { transform: rotate(10deg); }
+    100% { transform: rotate(-25deg); }
+  }
+  
