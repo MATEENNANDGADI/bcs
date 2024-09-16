@@ -27,15 +27,16 @@
   }
   
   .lightsaber-image {
-    width: 150px;
+    width: 35%;
     height: auto;
-    animation: swing 2s infinite;
+    animation: swing 6s 1;
   }
   
   /* Adding a simple animation */
   @keyframes swing {
-    0% { transform: rotate(-25deg); }
-    50% { transform: rotate(10deg); }
-    100% { transform: rotate(-25deg); }
+    0% { transform: rotate(0deg); }
+/*    25% { transform: rotate(90deg); }
+    50% { transform: rotate(180deg); }
+    75% { transform: rotate(270deg); }*/
+    100% { transform: rotate(360deg); } 
   }
-  

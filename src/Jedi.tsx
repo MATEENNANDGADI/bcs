@@ -1,5 +1,6 @@
 import React from 'react';
-import './Jedi.css';  // Importing the CSS file for styling
+import './Jedi.css';  
+import mateen from './asset/pngegg.png';
 
 class Jedi extends React.Component {
   render() {
@@ -11,9 +12,9 @@ class Jedi extends React.Component {
         </div>
         <div className="jedi-graphic">
           <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Lightsaber%2C_silver_hilt%2C_blue_blade.png" 
-            alt="Lightsaber" 
-            className="lightsaber-image" 
+            src={mateen}
+           alt="cant" 
+            className="lightsaber-image"
           />
         </div>
       </div>
