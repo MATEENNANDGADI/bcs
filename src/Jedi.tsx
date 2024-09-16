@@ -7,8 +7,9 @@ class Jedi extends React.Component {
     return (
       <div className="jedi-container">
         <div className="jedi-header">
-          <h1>Welcome, Abdul Mateen!</h1>
-          <p>May ALLAH be with you</p>
+          <h1>Wishes from Abdul Mateen!</h1>
+          <p>May ALLAH be with you.</p>
+          <p1>Look at the center of the comet, not the tail. ;)</p1>
         </div>
         <div className="jedi-graphic">
           <img 
