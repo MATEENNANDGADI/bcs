@@ -1,16 +1,18 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-//import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Jedi from './Jedi.tsx';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Signup from './Signup';
+import { BrowserRouter as Router } from 'react-router-dom';  // Import Router
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+ReactDOM.render(
   <React.StrictMode>
-    <Jedi />
-  </React.StrictMode>
+    <Router>
+      <Signup />  // Render the Signup component
+    </Router>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
