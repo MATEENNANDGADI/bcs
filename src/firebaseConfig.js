@@ -3,13 +3,14 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID"
-};
+    apiKey: "AIzaSyDVzQDzBFHLUfaMiiBICojZYpeZJlkqNDc",
+    authDomain: "bcs-mateen.firebaseapp.com",
+    projectId: "bcs-mateen",
+    storageBucket: "bcs-mateen.appspot.com",
+    messagingSenderId: "83557732514",
+    appId: "1:83557732514:web:6965cd851eaeee968a07fb",
+    measurementId: "G-HYGKHBLFLX"
+  };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
