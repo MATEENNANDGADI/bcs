@@ -6,6 +6,7 @@ import AdminSignIn from './AdminSignIn';
 import Dashboard from './Dashboard';
 import AdminDashboard from './AdminDashboard';
 import Navbar from './Navbar'; // Import your Navbar component
+import './App.css'; // Import global styles
 
 function App() {
   return (
@@ -23,3 +24,4 @@ function App() {
 }
 
 export default App;
+

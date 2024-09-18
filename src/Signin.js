@@ -2,6 +2,7 @@ import React from 'react';
 import { auth } from './firebaseConfig';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
+import './Signin.css'; // Import Signin CSS
 
 function SignIn() {
   const navigate = useNavigate();
@@ -19,11 +20,14 @@ function SignIn() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input name="email" type="email" placeholder="Email" required />
-      <input name="password" type="password" placeholder="Password" required />
-      <button type="submit">Sign In</button>
-    </form>
+    <div className="signin-container">
+      <h2>Sign In</h2>
+      <form onSubmit={handleSubmit}>
+        <input name="email" type="email" placeholder="Email" required />
+        <input name="password" type="password" placeholder="Password" required />
+        <button type="submit">Sign In</button>
+      </form>
+    </div>
   );
 }
 

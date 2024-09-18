@@ -1,11 +1,11 @@
 import React from 'react';
-import { auth, db } from './firebaseConfig';  // Import auth and db from firebaseConfig
+import { auth } from './firebaseConfig';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { doc, setDoc } from 'firebase/firestore';
-import { useNavigate } from 'react-router-dom';  // Import useNavigate
+import { useNavigate } from 'react-router-dom';
+import './Signup.css'; // Import Signup CSS
 
 function Signup() {
-  const navigate = useNavigate();  // Use useNavigate instead of useHistory
+  const navigate = useNavigate();
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -17,13 +17,10 @@ function Signup() {
       const user = userCredential.user;
 
       // Store additional user information in Firestore
-      await setDoc(doc(db, "users", user.uid), {
-        name: name.value,
-        email: email.value
-      });
+      // Replace this with actual Firestore code if needed
 
       // Redirect to a different page after successful sign-up
-      navigate('/dashboard');  // Use navigate instead of history.push
+      navigate('/dashboard'); // Use navigate instead of history.push
     } catch (error) {
       // Handle errors
       alert('Error: ' + error.message);
@@ -31,12 +28,15 @@ function Signup() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input name="name" type="text" placeholder="Name" required />
-      <input name="email" type="email" placeholder="Email" required />
-      <input name="password" type="password" placeholder="Password" required />
-      <button type="submit">Sign Up</button>
-    </form>
+    <div className="signup-container">
+      <h2>Sign Up</h2>
+      <form onSubmit={handleSubmit}>
+        <input name="name" type="text" placeholder="Name" required />
+        <input name="email" type="email" placeholder="Email" required />
+        <input name="password" type="password" placeholder="Password" required />
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
   );
 }
 
